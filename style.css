@@ -1,0 +1,396 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* Header */
+header {
+  background: hwb(0 24% 75%);
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 10rem 1rem 2rem;
+  background: #f9f9f9;
+}
+
+.hero .profile-pic img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  padding: 10rem 2rem;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-image img {
+  width: 200px;
+  border-radius: 1rem;
+}
+
+/* Work */
+#work {
+  padding: 9rem 2rem;
+  background: #fafafa;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+
+.project-item img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Education */
+.Education {
+  background: #fff;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.Education table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.Education th,
+.Education td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #444;
+  animation: fadeDown 1s ease;
+}
+
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.edu-card {
+  background: #ffffff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.social {
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  color: #000;
+  text-align: center;
+  padding: 8rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.social h2 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+.social p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  margin: 0 15px;
+  color: #000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0077ff;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+   .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideFadeDown 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+ 
+/* Keyframes para sa animation */
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  animation: fadeInUp 1s ease-in-out;
+}
+.hero {
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  padding: 80px 20px;
+  text-align: center;
+}
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+}
+.profile-pic img:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  font-weight: 800;
+  color: #111;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.tools {
+  text-align: center;
+  padding: 1px 20px;
+  background: #f9f9f9;
+}
+
+.tools h2 {
+  font-size: 2em;
+  margin-bottom: 50px;
+  margin: 120px;
+}
+
+.tools p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tool-item {
+  width: 100px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tool-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0px;
+}
+
+.tool-item p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tool-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Animation for smooth fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.tools {
+  min-height: auto;
+}
+
+.Education {
+  min-height: auto;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
